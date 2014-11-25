@@ -1,13 +1,13 @@
-(ns leiningen.new.mr-clojure
+(ns leiningen.new.sxm-clojure-ms
   (:use [leiningen.new.templates :only [renderer name-to-path ->files year]]))
 
-(def render (renderer "mr-clojure"))
+(def render (renderer "sxm-clojure-ms"))
 
 (defn cap [s]
   (str (.toUpperCase (subs s 0 1)) (subs s 1)))
 
-(defn mr-clojure
-  "Skeleton Clojure project"
+(defn sxm-clojure-ms
+  "Skeleton Clojure SynergyXM project"
   [name]
   (let [data {:name name
               :upper-name (cap name)

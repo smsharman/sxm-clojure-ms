@@ -1,16 +1,17 @@
-# Mr-Clojure
+# sxm-clojure-ms
 
-MixRadio's clojure skeleton project.
+SynergyXM skeleton clojure microservice project
 
-This generates the base REST service project that we use at MixRadio. In contains various libraries that we find useful and can be considered a condensing of the various pieces of commonality between our many clojure web services. We use this every day at MixRadio to power our music backend.
+This generates the base REST service project that we use to develop SynergyXM microservices. It is based on the mr-clojure template from Mix Radio. It contains various libraries that we find useful and can be considered a condensing of the various pieces of commonality between our many clojure web services.
+We use this every day at Hackthorn Innovation
 
-This project is the underlying Leiningen template, see [mr-clojure-exploded](http://github.com/mixradio/mr-clojure-exploded) for an example of the resulting service.
+This project is the underlying Leiningen template.
 
 ## Usage
 
 Generate a new project with:
 
-`lein new mr-clojure <your-project-name>`
+`lein new sxm-clojure-ms <your-project-name>`
 
 You now have a web service with a couple of basic "I'm alive" resources and an embedded Jetty server to run it.
 
@@ -105,10 +106,10 @@ These are some of the libraries that we use:
 
 ## Deployment
 
-`lein release` will update the version number, uberjar and then create an RPM of the service. This RPM can be installed on any compatible server (e.g. Redhat, CentOs, Amazon Linux). You will, however need to ensure that the environment variables defined in the project.clj are available for the RPM to run.
+`lein release` will update the version number, uberjar and then create an RPM of the service. This RPM can be installed on any compatible server (e.g. Redhat, CentOS, Amazon Linux). You will, however need to ensure that the environment variables defined in the project.clj are available for the RPM to run.
 
 ## License
 
-Copyright © 2014 MixRadio
+Copyright © 2014 Hackthorn Innovation Ltd, based on original code © 2014 Mix Radio Ltd
 
-[mr-clojure is released under the 3-clause license ("New BSD License" or "Modified BSD License")](https://github.com/mixradio/radix/blob/master/LICENSE)
+
