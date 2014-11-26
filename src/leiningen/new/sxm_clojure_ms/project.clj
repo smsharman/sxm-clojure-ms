@@ -1,4 +1,4 @@
-(defproject {{name}} "1.0.0-SNAPSHOT"
+(defproject {{name}} "1.0.0"
   :description "{{upper-name}} service"
 
   :dependencies [[ch.qos.logback/logback-classic "1.1.2"]
