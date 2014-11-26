@@ -70,7 +70,7 @@
 
   :rpm {:name "{{lower-name}}"
         :summary "RPM for {{upper-name}} service"
-        :copyright "MixRadio {{year}}"
+        :copyright "Hackthorn Innovation Ltd {{year}}"
         :preinstall {:scriptFile "scripts/rpm/preinstall.sh"}
         :postinstall {:scriptFile "scripts/rpm/postinstall.sh"}
         :preremove {:scriptFile "scripts/rpm/preremove.sh"}
