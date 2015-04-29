@@ -29,7 +29,7 @@ Let's call the healthcheck resource and see if we get a response:
 
 and we should see the result:
 
-`{"name":"i","version":"1.0.1-SNAPSHOT","success":true,"dependencies":[]}`
+`{"name":"i","version":"1.0.0-SNAPSHOT","success":true,"dependencies":[]}`
 
 ## Adding in a new resource
 
@@ -65,7 +65,7 @@ And now let's define our greet function:
 
 Save the file and give it a test:
 
-`curl localhost:8080/hello?nickname=world`
+`curl "http://localhost:8080/hello?nickname=world"`
 
 Should give us the output:
 
@@ -82,13 +82,24 @@ There are a few different types of test defined in our skeleton project: unit, a
 
 Each of these can be run in isolation using:
 
-`lein midje :filter unit`
+`lein midje :filter unit` or `./autounit` to watch for changes and automatically run unit tests.
 
 `./acceptance` or `./acceptance wait` to only start the server and not run the tests
 
 `./integration` or `./integration wait` to only start the server and not run the tests
 
 `./all` to run all the tests
+
+### Running a single test in isolation
+If you add metadata to a specific integration/acceptance test (or tests) and then tell midje to run
+just those tests with that metadata. For example, consider the following acceptance test:
+
+```clojure
+(fact "test something"
+    :only
+    (test-stuff))
+```
+you can now run that test in isolation with `./acceptance only`.
 
 ## Libraries
 
@@ -112,4 +123,4 @@ These are some of the libraries that we use:
 
 Copyright © 2014 Hackthorn Innovation Ltd, based on original code © 2014 Mix Radio Ltd
 
-
+[mr-clojure is released under the 3-clause license ("New BSD License" or "Modified BSD License")](https://github.com/mixradio/mr-clojure/blob/master/LICENSE)
